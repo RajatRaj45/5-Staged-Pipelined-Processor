@@ -1,0 +1,14 @@
+addi $1,$0,9 
+addi $2,$0,2 
+addi $3,$0,0 
+addi $4,$0,1 
+loop:
+beq $1,$2,exit
+addi $2,$2,1 
+add $5,$3,$4 
+add $3,$0,$4 
+add $4,$0,$5 
+j loop
+exit:
+st $5,%1
+*end:
